@@ -24,6 +24,7 @@ class ValidationTest {
         List<String> expected3 = List.of("city", "street", "houseNumber");
         assertThat(result3).isEqualTo(expected3);
     }
+    
     // BEGIN
     @Test
     void testAdvancedValidate() {
