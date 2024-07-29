@@ -34,6 +34,8 @@ public final class App {
                                 .filter(u -> u.getFirstName().toLowerCase().startsWith(term.toLowerCase()))
                                 .toList()
                 );
+            } else {
+                users.addAll(USERS);
             }
 
             var page = new UsersPage(users, term);
