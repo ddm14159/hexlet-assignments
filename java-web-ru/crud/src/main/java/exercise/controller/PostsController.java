@@ -18,7 +18,6 @@ public class PostsController {
         var pageNum = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
         var posts = PostRepository.findAll(pageNum, PAGE_SIZE);
         var page = new PostsPage(posts, pageNum);
-
         ctx.render("posts/index.jte", model("page", page));
     }
 
@@ -27,7 +26,6 @@ public class PostsController {
         var post = PostRepository.find(id)
                 .orElseThrow(() -> new NotFoundResponse("Page not found"));
         var page = new PostPage(post);
-
         ctx.render("posts/show.jte", model("page", page));
     }
     // END
