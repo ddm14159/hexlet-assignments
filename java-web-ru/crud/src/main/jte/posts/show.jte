@@ -1,4 +1,4 @@
-@import exercise.util.NamedRoutes;
+@import exercise.util.NamedRoutes
 @import exercise.dto.posts.PostPage
 @param PostPage page
 
