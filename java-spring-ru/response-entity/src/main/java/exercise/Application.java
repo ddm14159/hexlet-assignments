@@ -66,7 +66,7 @@ public class Application {
             page.setTitle(data.getTitle());
             page.setBody(data.getBody());
 
-            ResponseEntity.status(200).body(page);
+            return ResponseEntity.status(200).body(page);
         }
 
         return ResponseEntity.status(204).build();
